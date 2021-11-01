@@ -7,6 +7,9 @@ urlpatterns = [
     path('create/', views.CreateShop.as_view(), name='create_shop'),
     path('<int:pk>/', views.DetailShop.as_view(), name='detail_shop'),
     path('<int:pk>/update', views.UpdateShop.as_view(), name='update_shop'),
-    # path('<int:pk>/delete', views.DeleteShop.as_view(), name='delete_shop'),
+    path('<int:pk>/delete', views.DeleteShop.as_view(), name='delete_shop'),
+    # items
+    path('<int:pk>/additem', views.add_item, name='add_item'),
+
 
 ]

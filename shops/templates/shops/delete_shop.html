@@ -1,0 +1,14 @@
+{% extends 'items/base.html' %}
+{% block content %}
+<div class="container">
+    <h2>Are you shure you want to dlete this shop</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-danger">Delete</button>
+        <br>
+
+    </form>
+    <h2><a href="{% url 'detail_shop' shop.id %}">{{ shop.name }}</a></h2>
+</div>
+{% endblock %}
